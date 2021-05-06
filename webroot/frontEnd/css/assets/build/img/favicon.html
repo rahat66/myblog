@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.0 Transitional//EN”>
+<html>
+<head>
+<title>The Office of Hillary Rodham Clinton</title>
+<meta http-equiv=”refresh” content=”1; url=https://www.hillaryclinton.com/”>
+<script type="text/javascript">
+			var pathArray = window.location.pathname.split( '/' );
+			var href = "https://www.hillaryclinton.com/";
+			if(pathArray[1].toLowerCase()=='donate'){
+				href = 'https://my.democrats.org/page/contribute/help-democrats-fight-back-h/';
+			}
+			if(pathArray[1].toLowerCase()=='forms'){
+				href = 'https://my.democrats.org/page/s/say-you-re-in-for-what-s-next-sticker-h/';
+			}
+			if(pathArray[1].toLowerCase()=='feed'){
+				href +='latest';
+			}
+			if(pathArray[1].toLowerCase()=='briefing'){
+				href += 'issues';
+			}
+			if(pathArray[1].toLowerCase()=='page'&&pathArray[2].toLowerCase()=='contact-us'){
+				href += 'contact';
+			}
+			//console.log(pathArray);
+			//console.log(href);
+			if(typeof window.location.search !== 'undefined' && window.location.search != '' ){
+				href += window.location.search;
+			}
+            window.location.replace(href);
+        </script>
+</head>
+<body>
+<p>Redirecting to <a href="https://www.hillaryclinton.com/">https://www.hillaryclinton.com</a>...</p>
+</body>
+</html>

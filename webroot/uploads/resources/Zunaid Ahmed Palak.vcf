@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Palak;Zunaid Ahmed;;;
+FN:Zunaid Ahmed Palak
+ORG:ICT Division, Ministry of Posts, Telecommunications & Information Technology
+TITLE:State Minister
+TEL;type=Home:+880 2-8181115
+item1.TEL;waid=8801766699999:+880 1766-699999
+item1.X-ABLabel:Mobile
+item2.URL:palak.net.bd
+item2.X-ABLabel:OTHER
+EMAIL;TYPE=Home:me@palak.net.bd
+EMAIL;TYPE=Work:stateminister@ictd.gov.bd
+item3.ADR;type=Work:;;ICT Tower, Agargaon;Sher-E-Bangla Nagar;Dhaka;1207;Bangladesh
+item3.X-ABADR:
+END:VCARD
