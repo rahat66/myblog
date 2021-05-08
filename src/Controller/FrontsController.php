@@ -28,6 +28,18 @@ class FrontsController extends AppController{
     public function contact(){
       //  exit("hello");
       // $this -> viewBuilder()-> setLayout('front'); 
+       $this->loadModel('calls');
+      $call = $this -> calls -> find('all');
+      //debug($call);
+      //exit();
+      $this->set('phonenumber',$call);
+
+      // call emails table
+      $this->loadModel('emails');
+      $email = $this -> emails -> find('all');
+      //debug($call);
+      //exit();
+      $this->set('emailaddress',$email);
     }
 
     public function event(){

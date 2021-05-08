@@ -6,14 +6,15 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Call Entity
+ * Email Entity
  *
- * @property int $ID
- * @property string $number
+ * @property int $id
+ * @property string $title
+ * @property string $address
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  */
-class Call extends Entity
+class Email extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -25,7 +26,8 @@ class Call extends Entity
      * @var array
      */
     protected $_accessible = [
-        'number' => true,
+        'title' => true,
+        'address' => true,
         'created' => true,
         'modified' => true,
     ];

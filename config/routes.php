@@ -71,6 +71,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->connect('/interviews', ['controller' => 'Fronts', 'action' => 'interviews']);
     $builder->connect('/speeches', ['controller' => 'Fronts', 'action' => 'speeches']);
     $builder->connect('/photos', ['controller' => 'Fronts', 'action' => 'photos']);
+    
    
     
 
@@ -97,9 +98,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
 
 
 $routes->prefix('admin', function (RouteBuilder $routes) {
-    $routes->connect('/', ['controller' => 'Users', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'users', 'action' => 'index']);
     $routes->fallbacks(DashedRoute::class);
 });
+
 
 
 

@@ -1,3 +1,8 @@
+<?php
+    $c_name = $this->request->getParam('controller');
+    $a_name = $this->request->getParam('action');
+?>
+
 <!-- Navigation Bar-->
 <header id="topnav" class="defaultscroll fixed-top sticky">
     <div class="container">
@@ -34,11 +39,16 @@
             <!-- Navigation Menu-->
             <ul class="navigation-menu">
               
-                <li class="">
+                <li class="<?php if($a_name == 'home'){
+                    echo "bg-warning";
+                }?>">
+                
                 <?= $this->Html->link(__('Home'), ['controller' => 'fronts', 'action' => 'home'], ) ?>
                 </li>
-                <li class="">
-                <?= $this->Html->link(__('About'), ['controller' => 'fronts', 'action' => 'about'], ) ?>
+                <li class="<?php if($a_name == 'about'){
+                    echo "bg-warning";
+                }?>">
+                    <?= $this->Html->link(__('About'), ['controller' => 'fronts', 'action' => 'about'], ) ?>
                 </li>
                 <li class="">
                 <?= $this->Html->link(__('Event'), ['controller' => 'fronts', 'action' => 'event'], ) ?>

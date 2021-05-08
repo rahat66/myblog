@@ -85,9 +85,17 @@
                                         </div>
                                         <div class="app-contact-desc text-muted pt-1">
                                             <p class="mb-0 info-title f-13">Call :</p>
-                                            <p class="mb-0 f-13"><a class="text-dark text-muted" href="tel:+880-1766-699
-                                999">+880-0000-000 000</a></p>
-                                            <p class="mb-0 f-13"><a href="tel:+88 029 116 616" class="text-dark text-muted">+88 000 000 000</a></p></p>
+                                            <p></p>
+                                            <?php
+                                                foreach ($phonenumber as $key => $num) {
+                                                    # code...
+                                              
+                                            ?>
+                                            <p class="mb-0 f-13"><a href="tel:<?php echo $num->number ?>" class="text-dark text-muted"><?php echo $num->number ?></a></p>
+                                            <?php
+                                                  }
+
+                                            ?>
                                         </div>
                                     </div>
 
@@ -97,9 +105,19 @@
                                         </div>
                                         <div class="app-contact-desc text-muted pt-1">
                                             <p class="mb-0 info-title f-13">Email :</p>
+                                            <p></p>
+                                            <?php
+                                                foreach ($emailaddress as $key => $email) {
+                                                    # code...
+                                              
+                                            ?>
                                             <p class="mb-0 f-13">
-                                                <a href="#" class="text-muted"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span>solaiman@salim.bd.com</a>
+                                                <a href="mailto:<?php echo $email->address ?>" class="text-muted"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span><?php echo $email->address ?></a>
                                             </p> 
+                                            <?php
+                                                  }
+
+                                            ?>
                                             </p>
                                         </div>
                                     </div>
@@ -145,4 +163,3 @@
         </div>
         <!-- container end -->
     </section>
-    <!-- CONTACT US END -->

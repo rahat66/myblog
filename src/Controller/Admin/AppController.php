@@ -43,6 +43,9 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth');
+        $this->Auth->allow(['login']);
+        $this->set('uname',$this->Auth->user('username'));
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.
